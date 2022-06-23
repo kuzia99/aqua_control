@@ -158,7 +158,6 @@ void MainWindow::on_pushButtonLight_clicked()
         m_client->publish((QString)"user_7b2e8105/test","1");
         MqttSetting.stateLight = 1;
     }
-
     else
     {
         m_client->publish((QString)"user_7b2e8105/test","0");
@@ -179,4 +178,20 @@ void MainWindow::on_pushButtonManual_clicked()
         m_client->publish((QString)"user_7b2e8105/type_working","1");
         MqttSetting.stateMode = 1;
     }
+}
+
+void MainWindow::on_spinBoxTimeOn_valueChanged(int arg1)
+{
+    QByteArray q_b;
+    q_b.setNum(arg1);
+
+    m_client->publish((QString)"user_7b2e8105/time_on",q_b);
+}
+
+void MainWindow::on_spinBoxTimeOff_valueChanged(int arg1)
+{
+    QByteArray q_b;
+    q_b.setNum(arg1);
+
+    m_client->publish((QString)"user_7b2e8105/time_off",q_b);
 }

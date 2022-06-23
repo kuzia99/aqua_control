@@ -40,6 +40,10 @@ private slots:
 
     void on_pushButtonManual_clicked();
 
+    void on_spinBoxTimeOn_valueChanged(int arg1);
+
+    void on_spinBoxTimeOff_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
     Form *form;
