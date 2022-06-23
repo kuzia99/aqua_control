@@ -48,9 +48,25 @@ MainWindow::MainWindow(QWidget *parent)
         {
             /* меняем цвет кнопки "режим работы" */
             if(message[0]== '1')
+            {
                 ui->pushButtonManual->setStyleSheet("color: rgb(0, 170, 0);");/* сделать кнопку зеленой */
+                ui->pushButtonLight->setVisible(true);
+                /* убираем расписание */
+                ui->label->setVisible(false);
+                ui->label_2->setVisible(false);
+                ui->spinBoxTimeOn->setVisible(false);
+                ui->spinBoxTimeOff->setVisible(false);
+            }
             else if(message[0]== '0')
+            {
                 ui->pushButtonManual->setStyleSheet("color: rgb(255, 71, 34);");/* сделать текст кнопки красной */
+                ui->pushButtonLight->setVisible(false);
+                /* показываем расписание*/
+                ui->label->setVisible(true);
+                ui->label_2->setVisible(true);
+                ui->spinBoxTimeOn->setVisible(true);
+                ui->spinBoxTimeOff->setVisible(true);
+            }
         }
         else if(topic.name() == "user_7b2e8105/time_on")
         {
