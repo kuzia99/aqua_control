@@ -150,3 +150,33 @@ void MainWindow::on_Clicked()
         target->setStyleSheet(QString("#%1 { background-color: red; }").arg(target->objectName()));
     }
 }
+
+void MainWindow::on_pushButtonLight_clicked()
+{
+    if(MqttSetting.stateLight == 0)
+    {
+        m_client->publish((QString)"user_7b2e8105/test","1");
+        MqttSetting.stateLight = 1;
+    }
+
+    else
+    {
+        m_client->publish((QString)"user_7b2e8105/test","0");
+        MqttSetting.stateLight = 0;
+    }
+
+}
+
+void MainWindow::on_pushButtonManual_clicked()
+{
+    if(MqttSetting.stateMode == 1)
+    {//если включен рабочий
+        m_client->publish((QString)"user_7b2e8105/type_working","0");
+        MqttSetting.stateMode = 0;
+    }
+    else
+    {//если выключен
+        m_client->publish((QString)"user_7b2e8105/type_working","1");
+        MqttSetting.stateMode = 1;
+    }
+}

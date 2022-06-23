@@ -36,6 +36,10 @@ private slots:
     void on_action_2_triggered();
     void on_Clicked();
 
+    void on_pushButtonLight_clicked();
+
+    void on_pushButtonManual_clicked();
+
 private:
     Ui::MainWindow *ui;
     Form *form;
@@ -50,6 +54,11 @@ private:
     int port = MQTT_PORT;
     QString Login = MQTT_USERNAME;
     QString Pass = MQTT_PASSWORD;
+
+    bool stateLight;
+    bool stateMode;
+    uint8_t timeOn;
+    uint8_t timeOff;
 }MqttSetting;
 
 #endif // MAINWINDOW_H

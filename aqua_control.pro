@@ -28,7 +28,13 @@ FORMS += \
     form.ui \
     mainwindow.ui
 
+unix {
+        RC_FILE += res.rc
+        OTHER_FILES += file.rc
+}
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES +=
