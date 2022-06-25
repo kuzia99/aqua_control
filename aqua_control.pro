@@ -28,10 +28,8 @@ FORMS += \
     form.ui \
     mainwindow.ui
 
-unix {
-        RC_FILE += res.rc
-        OTHER_FILES += file.rc
-}
+RC_ICONS = app.ico
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
