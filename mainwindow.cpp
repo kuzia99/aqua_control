@@ -41,16 +41,20 @@ MainWindow::MainWindow(QWidget *parent)
             /* меняем цвет кнопки "Свет" */
             if(message[0] == '1')
             {
-                 ui->pushButtonLight->setStyleSheet("background-color: rgb(176, 226, 152);border: none;"
+                 ui->pushButtonLight->setStyleSheet("QPushButton { background-color: rgb(176, 226, 152);"
                                                     "border: 4px rgb(176, 226, 152);"
-                                                    "border-radius: 15px");/* сделать кнопку зеленой */
+                                                    "border-radius: 15px; }"
+                                                    "QPushButton:hover { background-color: rgb(145, 188, 127); "
+                                                    " border: 2px solid #FBAD25; }");/* сделать кнопку зеленой */
             }
 
             else if(message[0] == '0')
             {
-                ui->pushButtonLight->setStyleSheet("background-color: rgb(224, 114, 164);border: none;"
+                ui->pushButtonLight->setStyleSheet("QPushButton { background-color: rgb(224, 114, 164);"
                                                    "border: 4px rgb(224, 114, 164);"
-                                                   "border-radius: 15px");/* сделать текст кнопки красной */
+                                                   "border-radius: 15px; }"
+                                                   "QPushButton:hover { background-color: rgb(178, 87, 126); "
+                                                   " border: 2px solid #FBAD25; }");/* сделать текст кнопки красной */
             }
         }
         else if(topic.name() == "user_7b2e8105/type_working")
@@ -58,9 +62,11 @@ MainWindow::MainWindow(QWidget *parent)
             /* меняем цвет кнопки "режим работы" */
             if(message[0]== '1')
             {
-                ui->pushButtonManual->setStyleSheet("background-color: rgb(176, 226, 152);"
+                ui->pushButtonManual->setStyleSheet("QPushButton { background-color: rgb(176, 226, 152);"
                                                     "border: 4px rgb(176, 226, 152);"
-                                                    "border-radius: 15px");/* сделать кнопку зеленой */
+                                                    "border-radius: 15px; }"
+                                                    "QPushButton:hover { background-color: rgb(145, 188, 127); "
+                                                    " border: 2px solid #FBAD25; }");/* сделать кнопку зеленой */
                 ui->pushButtonLight->setVisible(true);
                 /* убираем расписание */
                 ui->label->setVisible(false);
@@ -70,9 +76,11 @@ MainWindow::MainWindow(QWidget *parent)
             }
             else if(message[0]== '0')
             {
-                ui->pushButtonManual->setStyleSheet("background-color: rgb(224, 114, 164);border: none;"
+                ui->pushButtonManual->setStyleSheet("QPushButton { background-color: rgb(224, 114, 164);"
                                                     "border: 4px rgb(224, 114, 164);"
-                                                    "border-radius: 15px");/* сделать текст кнопки красной */
+                                                    "border-radius: 15px; }"
+                                                    "QPushButton:hover { background-color: rgb(178, 87, 126); "
+                                                    " border: 2px solid #FBAD25; }");/* сделать текст кнопки красной */
                 ui->pushButtonLight->setVisible(false);
                 /* показываем расписание*/
                 ui->label->setVisible(true);
@@ -184,12 +192,12 @@ void MainWindow::on_pushButtonLight_clicked()
 {
     if(MqttSetting.stateLight == 0)
     {
-        m_client->publish((QString)"user_7b2e8105/test","1");
+        m_client->publish((QString)"user_7b2e8105/test","1", 1);
         MqttSetting.stateLight = 1;
     }
     else
     {
-        m_client->publish((QString)"user_7b2e8105/test","0");
+        m_client->publish((QString)"user_7b2e8105/test","0", 1);
         MqttSetting.stateLight = 0;
     }
 
@@ -199,12 +207,12 @@ void MainWindow::on_pushButtonManual_clicked()
 {
     if(MqttSetting.stateMode == 1)
     {//если включен рабочий
-        m_client->publish((QString)"user_7b2e8105/type_working","0");
+        m_client->publish((QString)"user_7b2e8105/type_working","0", 1);
         MqttSetting.stateMode = 0;
     }
     else
     {//если выключен
-        m_client->publish((QString)"user_7b2e8105/type_working","1");
+        m_client->publish((QString)"user_7b2e8105/type_working","1", 1);
         MqttSetting.stateMode = 1;
     }
 }
@@ -214,7 +222,7 @@ void MainWindow::on_spinBoxTimeOn_valueChanged(int arg1)
     QByteArray q_b;
     q_b.setNum(arg1);
 
-    m_client->publish((QString)"user_7b2e8105/time_on",q_b);
+    m_client->publish((QString)"user_7b2e8105/time_on",q_b, 1);
 }
 
 void MainWindow::on_spinBoxTimeOff_valueChanged(int arg1)
@@ -222,5 +230,5 @@ void MainWindow::on_spinBoxTimeOff_valueChanged(int arg1)
     QByteArray q_b;
     q_b.setNum(arg1);
 
-    m_client->publish((QString)"user_7b2e8105/time_off",q_b);
+    m_client->publish((QString)"user_7b2e8105/time_off",q_b, 1);
 }
