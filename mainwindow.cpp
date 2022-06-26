@@ -41,12 +41,16 @@ MainWindow::MainWindow(QWidget *parent)
             /* меняем цвет кнопки "Свет" */
             if(message[0] == '1')
             {
-                 ui->pushButtonLight->setStyleSheet("background-color: rgb(176, 226, 152);");/* сделать кнопку зеленой */
+                 ui->pushButtonLight->setStyleSheet("background-color: rgb(176, 226, 152);border: none;"
+                                                    "border: 4px rgb(176, 226, 152);"
+                                                    "border-radius: 15px");/* сделать кнопку зеленой */
             }
 
             else if(message[0] == '0')
             {
-                ui->pushButtonLight->setStyleSheet("background-color: rgb(224, 114, 164);");/* сделать текст кнопки красной */
+                ui->pushButtonLight->setStyleSheet("background-color: rgb(224, 114, 164);border: none;"
+                                                   "border: 4px rgb(224, 114, 164);"
+                                                   "border-radius: 15px");/* сделать текст кнопки красной */
             }
         }
         else if(topic.name() == "user_7b2e8105/type_working")
@@ -54,7 +58,9 @@ MainWindow::MainWindow(QWidget *parent)
             /* меняем цвет кнопки "режим работы" */
             if(message[0]== '1')
             {
-                ui->pushButtonManual->setStyleSheet("background-color: rgb(176, 226, 152);");/* сделать кнопку зеленой */
+                ui->pushButtonManual->setStyleSheet("background-color: rgb(176, 226, 152);"
+                                                    "border: 4px rgb(176, 226, 152);"
+                                                    "border-radius: 15px");/* сделать кнопку зеленой */
                 ui->pushButtonLight->setVisible(true);
                 /* убираем расписание */
                 ui->label->setVisible(false);
@@ -64,7 +70,9 @@ MainWindow::MainWindow(QWidget *parent)
             }
             else if(message[0]== '0')
             {
-                ui->pushButtonManual->setStyleSheet("background-color: rgb(224, 114, 164);");/* сделать текст кнопки красной */
+                ui->pushButtonManual->setStyleSheet("background-color: rgb(224, 114, 164);border: none;"
+                                                    "border: 4px rgb(224, 114, 164);"
+                                                    "border-radius: 15px");/* сделать текст кнопки красной */
                 ui->pushButtonLight->setVisible(false);
                 /* показываем расписание*/
                 ui->label->setVisible(true);

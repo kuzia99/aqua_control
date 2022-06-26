@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>324</width>
-    <height>180</height>
+    <width>424</width>
+    <height>244</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>324</width>
-    <height>180</height>
+    <width>424</width>
+    <height>244</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -28,6 +28,11 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label_5">
+     <property name="font">
+      <font>
+       <family>Rubik</family>
+      </font>
+     </property>
      <property name="text">
       <string>Настройки подключения к брокеру</string>
      </property>
@@ -40,6 +45,11 @@
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>Rubik</family>
+        </font>
+       </property>
        <property name="text">
         <string>Адрес:</string>
        </property>
@@ -54,6 +64,11 @@
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>Rubik</family>
+        </font>
+       </property>
        <property name="text">
         <string>Порт:</string>
        </property>
@@ -68,6 +83,11 @@
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <family>Rubik</family>
+        </font>
+       </property>
        <property name="text">
         <string>Логин:</string>
        </property>
@@ -82,6 +102,11 @@
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
       <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <family>Rubik</family>
+        </font>
+       </property>
        <property name="text">
         <string>Пароль:</string>
        </property>
@@ -109,6 +134,11 @@
      </item>
      <item>
       <widget class="QPushButton" name="pushButtonConnect">
+       <property name="font">
+        <font>
+         <family>Rubik</family>
+        </font>
+       </property>
        <property name="text">
         <string>Нажми если хочешь подключиться</string>
        </property>
