@@ -46,13 +46,16 @@ public:
     {
         if (Form->objectName().isEmpty())
             Form->setObjectName(QString::fromUtf8("Form"));
-        Form->resize(324, 180);
-        Form->setMinimumSize(QSize(324, 180));
+        Form->resize(424, 244);
+        Form->setMinimumSize(QSize(424, 244));
         Form->setMaximumSize(QSize(624, 380));
         verticalLayout = new QVBoxLayout(Form);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         label_5 = new QLabel(Form);
         label_5->setObjectName(QString::fromUtf8("label_5"));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Rubik")});
+        label_5->setFont(font);
         label_5->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout->addWidget(label_5);
@@ -61,6 +64,7 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label = new QLabel(Form);
         label->setObjectName(QString::fromUtf8("label"));
+        label->setFont(font);
 
         horizontalLayout->addWidget(label);
 
@@ -76,6 +80,7 @@ public:
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         label_2 = new QLabel(Form);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setFont(font);
 
         horizontalLayout_2->addWidget(label_2);
 
@@ -91,6 +96,7 @@ public:
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         label_3 = new QLabel(Form);
         label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setFont(font);
 
         horizontalLayout_3->addWidget(label_3);
 
@@ -106,6 +112,7 @@ public:
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         label_4 = new QLabel(Form);
         label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setFont(font);
 
         horizontalLayout_4->addWidget(label_4);
 
@@ -125,6 +132,7 @@ public:
 
         pushButtonConnect = new QPushButton(Form);
         pushButtonConnect->setObjectName(QString::fromUtf8("pushButtonConnect"));
+        pushButtonConnect->setFont(font);
 
         horizontalLayout_5->addWidget(pushButtonConnect);
 

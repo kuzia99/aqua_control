@@ -61,6 +61,10 @@ public:
         action7890787->setObjectName(QString::fromUtf8("action7890787"));
         action_2 = new QAction(MainWindow);
         action_2->setObjectName(QString::fromUtf8("action_2"));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Rubik")});
+        font.setPointSize(11);
+        action_2->setFont(font);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -71,10 +75,16 @@ public:
         pushButtonManual->setObjectName(QString::fromUtf8("pushButtonManual"));
         pushButtonManual->setEnabled(true);
         pushButtonManual->setMinimumSize(QSize(0, 50));
-        QFont font;
-        font.setFamilies({QString::fromUtf8("Rubik")});
-        pushButtonManual->setFont(font);
-        pushButtonManual->setStyleSheet(QString::fromUtf8("color: rgb(44, 54, 63);"));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Rubik")});
+        pushButtonManual->setFont(font1);
+        pushButtonManual->setStyleSheet(QString::fromUtf8("QPushButton \n"
+"{ \n"
+"background-color: rgb(224, 114, 164);\n"
+"border: 4px rgb(224, 114, 164);\n"
+"border-radius: 15px;\n"
+" }\n"
+" QPushButton:hover { background-color: rgb(178, 87, 126);}"));
         pushButtonManual->setIconSize(QSize(24, 28));
 
         verticalLayout_2->addWidget(pushButtonManual);
@@ -86,8 +96,14 @@ public:
         pushButtonLight->setObjectName(QString::fromUtf8("pushButtonLight"));
         pushButtonLight->setEnabled(true);
         pushButtonLight->setMinimumSize(QSize(0, 50));
-        pushButtonLight->setFont(font);
-        pushButtonLight->setStyleSheet(QString::fromUtf8("color: rgb(44, 54, 63);"));
+        pushButtonLight->setFont(font1);
+        pushButtonLight->setStyleSheet(QString::fromUtf8("QPushButton \n"
+"{ \n"
+"background-color: rgb(224, 114, 164);\n"
+"border: 4px rgb(224, 114, 164);\n"
+"border-radius: 15px;\n"
+" }\n"
+" QPushButton:hover { background-color: rgb(178, 87, 126);}"));
 
         verticalLayout->addWidget(pushButtonLight);
 
@@ -97,11 +113,11 @@ public:
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("Rubik")});
-        font1.setPointSize(13);
-        font1.setItalic(false);
-        label->setFont(font1);
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("Rubik")});
+        font2.setPointSize(13);
+        font2.setItalic(false);
+        label->setFont(font2);
         label->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
 
         horizontalLayout_2->addWidget(label);
@@ -109,12 +125,12 @@ public:
         spinBoxTimeOn = new QSpinBox(centralwidget);
         spinBoxTimeOn->setObjectName(QString::fromUtf8("spinBoxTimeOn"));
         spinBoxTimeOn->setMinimumSize(QSize(0, 50));
-        QFont font2;
-        font2.setFamilies({QString::fromUtf8("Rubik")});
-        font2.setPointSize(16);
-        font2.setKerning(true);
-        font2.setStyleStrategy(QFont::PreferAntialias);
-        spinBoxTimeOn->setFont(font2);
+        QFont font3;
+        font3.setFamilies({QString::fromUtf8("Rubik")});
+        font3.setPointSize(16);
+        font3.setKerning(true);
+        font3.setStyleStrategy(QFont::PreferAntialias);
+        spinBoxTimeOn->setFont(font3);
         spinBoxTimeOn->setStyleSheet(QString::fromUtf8(""));
         spinBoxTimeOn->setAlignment(Qt::AlignCenter);
         spinBoxTimeOn->setMaximum(24);
@@ -129,7 +145,7 @@ public:
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setFont(font1);
+        label_2->setFont(font2);
         label_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
 
         horizontalLayout_4->addWidget(label_2);
@@ -137,10 +153,10 @@ public:
         spinBoxTimeOff = new QSpinBox(centralwidget);
         spinBoxTimeOff->setObjectName(QString::fromUtf8("spinBoxTimeOff"));
         spinBoxTimeOff->setMinimumSize(QSize(0, 50));
-        QFont font3;
-        font3.setFamilies({QString::fromUtf8("Rubik")});
-        font3.setPointSize(16);
-        spinBoxTimeOff->setFont(font3);
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("Rubik")});
+        font4.setPointSize(16);
+        spinBoxTimeOff->setFont(font4);
         spinBoxTimeOff->setStyleSheet(QString::fromUtf8(""));
         spinBoxTimeOff->setAlignment(Qt::AlignCenter);
         spinBoxTimeOff->setMaximum(24);
@@ -182,6 +198,7 @@ public:
         pushButtonManual->setText(QCoreApplication::translate("MainWindow", "\320\240\321\203\321\207\320\275\320\276\320\271 \321\200\320\265\320\266\320\270\320\274", nullptr));
         pushButtonLight->setText(QCoreApplication::translate("MainWindow", "\320\241\320\262\320\265\321\202", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "\320\222\321\200\320\265\320\274\321\217 \320\262\320\272\320\273\321\216\321\207\320\265\320\275\320\270\321\217", nullptr));
+        spinBoxTimeOn->setSuffix(QString());
         label_2->setText(QCoreApplication::translate("MainWindow", "\320\222\321\200\320\265\320\274\321\217 \320\262\321\213\320\272\320\273\321\216\321\207\320\265\320\275\320\270\321\217:", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\320\237\320\276\320\264\320\272\320\273\321\216\321\207\320\265\320\275\320\270\320\265", nullptr));
     } // retranslateUi

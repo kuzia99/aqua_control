@@ -9,7 +9,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Temp\\QtCreator-pBikTy\\clang-uiheader-GPNKZI",
+        "C:\\Temp\\QtCreator-gxIRWr\\clang-uiheader-GNChfO",
         "-nostdinc",
         "-nostdinc++",
         "-Wall",
@@ -35,7 +35,7 @@
         "-DQT_CORE_LIB",
         "-DQT_NEEDS_QMAIN",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include",
         "-I",
@@ -49,7 +49,7 @@
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include\\QtCore",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\release",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\release",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\mkspecs\\win32-g++",
         "-isystem",
@@ -73,10 +73,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\form.cpp"
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\form.cpp"
     ],
-    "directory": "C:/Users/Maxim/Documents/aqua_control-main/.qtc_clangd",
-    "file": "C:/Users/Maxim/Documents/aqua_control-main/form.cpp"
+    "directory": "C:/Users/Maxim/Documents/GitHub/aqua_control/.qtc_clangd",
+    "file": "C:/Users/Maxim/Documents/GitHub/aqua_control/form.cpp"
 },
 {
     "arguments": [
@@ -88,7 +88,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Temp\\QtCreator-pBikTy\\clang-uiheader-GPNKZI",
+        "C:\\Temp\\QtCreator-gxIRWr\\clang-uiheader-GNChfO",
         "-nostdinc",
         "-nostdinc++",
         "-Wall",
@@ -114,7 +114,7 @@
         "-DQT_CORE_LIB",
         "-DQT_NEEDS_QMAIN",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include",
         "-I",
@@ -128,7 +128,7 @@
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include\\QtCore",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\release",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\release",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\mkspecs\\win32-g++",
         "-isystem",
@@ -152,10 +152,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\main.cpp"
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\main.cpp"
     ],
-    "directory": "C:/Users/Maxim/Documents/aqua_control-main/.qtc_clangd",
-    "file": "C:/Users/Maxim/Documents/aqua_control-main/main.cpp"
+    "directory": "C:/Users/Maxim/Documents/GitHub/aqua_control/.qtc_clangd",
+    "file": "C:/Users/Maxim/Documents/GitHub/aqua_control/main.cpp"
 },
 {
     "arguments": [
@@ -167,7 +167,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Temp\\QtCreator-pBikTy\\clang-uiheader-GPNKZI",
+        "C:\\Temp\\QtCreator-gxIRWr\\clang-uiheader-GNChfO",
         "-nostdinc",
         "-nostdinc++",
         "-Wall",
@@ -193,7 +193,7 @@
         "-DQT_CORE_LIB",
         "-DQT_NEEDS_QMAIN",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include",
         "-I",
@@ -207,7 +207,7 @@
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include\\QtCore",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\release",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\release",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\mkspecs\\win32-g++",
         "-isystem",
@@ -231,10 +231,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\mainwindow.cpp"
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\mainwindow.cpp"
     ],
-    "directory": "C:/Users/Maxim/Documents/aqua_control-main/.qtc_clangd",
-    "file": "C:/Users/Maxim/Documents/aqua_control-main/mainwindow.cpp"
+    "directory": "C:/Users/Maxim/Documents/GitHub/aqua_control/.qtc_clangd",
+    "file": "C:/Users/Maxim/Documents/GitHub/aqua_control/mainwindow.cpp"
 },
 {
     "arguments": [
@@ -246,7 +246,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Temp\\QtCreator-pBikTy\\clang-uiheader-GPNKZI",
+        "C:\\Temp\\QtCreator-gxIRWr\\clang-uiheader-GNChfO",
         "-nostdinc",
         "-nostdinc++",
         "-Wall",
@@ -272,7 +272,7 @@
         "-DQT_CORE_LIB",
         "-DQT_NEEDS_QMAIN",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include",
         "-I",
@@ -286,7 +286,7 @@
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include\\QtCore",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\release",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\release",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\mkspecs\\win32-g++",
         "-isystem",
@@ -310,10 +310,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\form.h"
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\form.h"
     ],
-    "directory": "C:/Users/Maxim/Documents/aqua_control-main/.qtc_clangd",
-    "file": "C:/Users/Maxim/Documents/aqua_control-main/form.h"
+    "directory": "C:/Users/Maxim/Documents/GitHub/aqua_control/.qtc_clangd",
+    "file": "C:/Users/Maxim/Documents/GitHub/aqua_control/form.h"
 },
 {
     "arguments": [
@@ -325,7 +325,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Temp\\QtCreator-pBikTy\\clang-uiheader-GPNKZI",
+        "C:\\Temp\\QtCreator-gxIRWr\\clang-uiheader-GNChfO",
         "-nostdinc",
         "-nostdinc++",
         "-Wall",
@@ -351,7 +351,7 @@
         "-DQT_CORE_LIB",
         "-DQT_NEEDS_QMAIN",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include",
         "-I",
@@ -365,7 +365,7 @@
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include\\QtCore",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\release",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\release",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\mkspecs\\win32-g++",
         "-isystem",
@@ -389,10 +389,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\mainwindow.h"
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\mainwindow.h"
     ],
-    "directory": "C:/Users/Maxim/Documents/aqua_control-main/.qtc_clangd",
-    "file": "C:/Users/Maxim/Documents/aqua_control-main/mainwindow.h"
+    "directory": "C:/Users/Maxim/Documents/GitHub/aqua_control/.qtc_clangd",
+    "file": "C:/Users/Maxim/Documents/GitHub/aqua_control/mainwindow.h"
 },
 {
     "arguments": [
@@ -404,7 +404,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Temp\\QtCreator-pBikTy\\clang-uiheader-GPNKZI",
+        "C:\\Temp\\QtCreator-gxIRWr\\clang-uiheader-GNChfO",
         "-nostdinc",
         "-nostdinc++",
         "-Wall",
@@ -430,7 +430,7 @@
         "-DQT_CORE_LIB",
         "-DQT_NEEDS_QMAIN",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include",
         "-I",
@@ -444,7 +444,7 @@
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include\\QtCore",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\release",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\release",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\mkspecs\\win32-g++",
         "-isystem",
@@ -468,10 +468,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\ui_form.h"
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\ui_mainwindow.h"
     ],
-    "directory": "C:/Users/Maxim/Documents/aqua_control-main/.qtc_clangd",
-    "file": "C:/Users/Maxim/Documents/aqua_control-main/ui_form.h"
+    "directory": "C:/Users/Maxim/Documents/GitHub/aqua_control/.qtc_clangd",
+    "file": "C:/Users/Maxim/Documents/GitHub/aqua_control/ui_mainwindow.h"
 },
 {
     "arguments": [
@@ -483,7 +483,7 @@
         "-I",
         "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Temp\\QtCreator-pBikTy\\clang-uiheader-GPNKZI",
+        "C:\\Temp\\QtCreator-gxIRWr\\clang-uiheader-GNChfO",
         "-nostdinc",
         "-nostdinc++",
         "-Wall",
@@ -509,7 +509,7 @@
         "-DQT_CORE_LIB",
         "-DQT_NEEDS_QMAIN",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include",
         "-I",
@@ -523,7 +523,7 @@
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\include\\QtCore",
         "-I",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\release",
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\release",
         "-I",
         "C:\\Qt\\6.3.1\\mingw_64\\mkspecs\\win32-g++",
         "-isystem",
@@ -547,9 +547,9 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "C:\\Users\\Maxim\\Documents\\aqua_control-main\\ui_mainwindow.h"
+        "C:\\Users\\Maxim\\Documents\\GitHub\\aqua_control\\ui_form.h"
     ],
-    "directory": "C:/Users/Maxim/Documents/aqua_control-main/.qtc_clangd",
-    "file": "C:/Users/Maxim/Documents/aqua_control-main/ui_mainwindow.h"
+    "directory": "C:/Users/Maxim/Documents/GitHub/aqua_control/.qtc_clangd",
+    "file": "C:/Users/Maxim/Documents/GitHub/aqua_control/ui_form.h"
 }
 ]

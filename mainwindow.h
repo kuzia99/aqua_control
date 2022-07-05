@@ -5,11 +5,11 @@
 #include <QMqttClient>
 #include "form.h"
 
-#define MQTT_HOST "srv2.clusterfly.ru"
+#define MQTT_HOST "ENTER_HOST_HERE"
 #define MQTT_PORT 9991
 
-#define MQTT_USERNAME "user_7b2e8105"
-#define MQTT_PASSWORD "pass_a0a86fb4"
+#define MQTT_USERNAME "ENTER_USERNAME_HERE"
+#define MQTT_PASSWORD "ENTER_PASSWORD_HERE"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

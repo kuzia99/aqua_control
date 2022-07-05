@@ -1,12 +1,14 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QStyleFactory>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
 
     form = new Form();
     connect(form, &Form::firstwindow, this, &MainWindow::show);//вызов главного окна из окна настроек
@@ -41,7 +43,8 @@ MainWindow::MainWindow(QWidget *parent)
             /* меняем цвет кнопки "Свет" */
             if(message[0] == '1')
             {
-                 ui->pushButtonLight->setStyleSheet("QPushButton { background-color: rgb(176, 226, 152);"
+                MqttSetting.stateLight = 1;
+                ui->pushButtonLight->setStyleSheet("QPushButton { background-color: rgb(176, 226, 152);"
                                                     "border: 4px rgb(176, 226, 152);"
                                                     "border-radius: 15px; }"
                                                     "QPushButton:hover { background-color: rgb(145, 188, 127); "
@@ -50,6 +53,7 @@ MainWindow::MainWindow(QWidget *parent)
 
             else if(message[0] == '0')
             {
+                MqttSetting.stateLight = 0;
                 ui->pushButtonLight->setStyleSheet("QPushButton { background-color: rgb(224, 114, 164);"
                                                    "border: 4px rgb(224, 114, 164);"
                                                    "border-radius: 15px; }"
@@ -62,6 +66,7 @@ MainWindow::MainWindow(QWidget *parent)
             /* меняем цвет кнопки "режим работы" */
             if(message[0]== '1')
             {
+                MqttSetting.stateMode = 1;
                 ui->pushButtonManual->setStyleSheet("QPushButton { background-color: rgb(176, 226, 152);"
                                                     "border: 4px rgb(176, 226, 152);"
                                                     "border-radius: 15px; }"
@@ -76,6 +81,7 @@ MainWindow::MainWindow(QWidget *parent)
             }
             else if(message[0]== '0')
             {
+                MqttSetting.stateMode = 0;
                 ui->pushButtonManual->setStyleSheet("QPushButton { background-color: rgb(224, 114, 164);"
                                                     "border: 4px rgb(224, 114, 164);"
                                                     "border-radius: 15px; }"
@@ -91,11 +97,15 @@ MainWindow::MainWindow(QWidget *parent)
         }
         else if(topic.name() == "user_7b2e8105/time_on")
         {
-            ui->spinBoxTimeOn->setValue(message.toInt());
+            MqttSetting.timeOn = message.toInt();
+            qDebug() << "user_7b2e8105/time_on " << message << MqttSetting.timeOn;
+            ui->spinBoxTimeOn->setValue(MqttSetting.timeOn);
         }
         else if(topic.name() == "user_7b2e8105/time_off")
         {
-            ui->spinBoxTimeOff->setValue(message.toInt());
+            MqttSetting.timeOff = message.toInt();
+            qDebug() << "user_7b2e8105/time_off " << message << MqttSetting.timeOff;
+            ui->spinBoxTimeOff->setValue(MqttSetting.timeOff);
         }
 
         });
@@ -112,6 +122,7 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    m_client->disconnectFromHost();
 }
 
 
@@ -144,10 +155,11 @@ void MainWindow::stateChangedStatus()
         ui->statusbar->showMessage("Подключились к брокеру!");
 
         /* подписываемся на топики */
+        m_client->subscribe((QString)"user_7b2e8105/time_off");
         m_client->subscribe((QString)"user_7b2e8105/test");
         m_client->subscribe((QString)"user_7b2e8105/type_working");
         m_client->subscribe((QString)"user_7b2e8105/time_on");
-        m_client->subscribe((QString)"user_7b2e8105/time_off");
+
     }
     else
     {
@@ -192,13 +204,11 @@ void MainWindow::on_pushButtonLight_clicked()
 {
     if(MqttSetting.stateLight == 0)
     {
-        m_client->publish((QString)"user_7b2e8105/test","1", 1);
-        MqttSetting.stateLight = 1;
+        m_client->publish((QString)"user_7b2e8105/test","1", 0, 1);
     }
     else
     {
-        m_client->publish((QString)"user_7b2e8105/test","0", 1);
-        MqttSetting.stateLight = 0;
+        m_client->publish((QString)"user_7b2e8105/test","0", 0, 1);
     }
 
 }
@@ -207,13 +217,11 @@ void MainWindow::on_pushButtonManual_clicked()
 {
     if(MqttSetting.stateMode == 1)
     {//если включен рабочий
-        m_client->publish((QString)"user_7b2e8105/type_working","0", 1);
-        MqttSetting.stateMode = 0;
+        m_client->publish((QString)"user_7b2e8105/type_working","0", 0, 1);
     }
     else
     {//если выключен
-        m_client->publish((QString)"user_7b2e8105/type_working","1", 1);
-        MqttSetting.stateMode = 1;
+        m_client->publish((QString)"user_7b2e8105/type_working","1", 0, 1);
     }
 }
 
@@ -222,7 +230,7 @@ void MainWindow::on_spinBoxTimeOn_valueChanged(int arg1)
     QByteArray q_b;
     q_b.setNum(arg1);
 
-    m_client->publish((QString)"user_7b2e8105/time_on",q_b, 1);
+    m_client->publish((QString)"user_7b2e8105/time_on",q_b, 0, 1);
 }
 
 void MainWindow::on_spinBoxTimeOff_valueChanged(int arg1)
@@ -230,5 +238,7 @@ void MainWindow::on_spinBoxTimeOff_valueChanged(int arg1)
     QByteArray q_b;
     q_b.setNum(arg1);
 
-    m_client->publish((QString)"user_7b2e8105/time_off",q_b, 1);
+    m_client->publish((QString)"user_7b2e8105/time_off",q_b, 0, 1);
 }
+
+
